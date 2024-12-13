@@ -1,0 +1,24 @@
+/* Example: Using the image as a background for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://img.freepik.com/free-p.jpg');
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  background-position: center; /* Centers the image */
+}
+
+/* Example: Using the image inside a specific div */
+.hero-section {
+  height: 400px; /* Define height for the section */
+  background-image: url('https://img.freepik.com/free-photo/workspace-with-office-supplies_9658575.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #ddd; /* Optional styling */
+  border-radius: 10px;
+}
+
+
