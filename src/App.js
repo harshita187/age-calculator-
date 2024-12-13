@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./App.css"
 
 function App() {
   const [dob, setDob] = useState('');
@@ -30,28 +31,27 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Age Calculator</h1>
-      <input
-        type="date"
-        value={dob}
-        onChange={(e) => setDob(e.target.value)}
-        style={{ padding: '8px', fontSize: '16px' }}
-      />
-      <button onClick={calculateAge} style={{ padding: '8px 16px', marginLeft: '10px', fontSize: '16px' }}>
-        Calculate Age
-      </button>
-      {age && (
-        <div style={{ marginTop: '20px' }}>
-          <h2>Your Age:</h2>
-          <p>
-            {age.years} years, {age.months} months, and {age.days} days
-          </p>
-        </div>
-      )}
+    <div className='hero-section'>
+      <div className="age-calculator-container">
+        <h1>Age Calculator</h1>
+        <input
+          type="date"
+          value={dob}
+          onChange={(e) => setDob(e.target.value)}
+          className="date-input"
+        />
+        <button onClick={calculateAge} className="calculate-button">
+          Calculate Age
+        </button>
+        {age && (
+          <div className="result">
+            <h2>Your Age:</h2>
+            <p>{age.years} years, {age.months} months, and {age.days} days</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
 export default App;
-
